@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="25px"
+    android:paddingLeft="25px"
+    android:paddingRight="175px"
+    android:paddingTop="25px"
+    tools:context=".MainActivity" >
+
+    <Spinner
+        android:id="@+id/spin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_below="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Numero de desplazamiento" />
+
+    <EditText
+        android:id="@+id/etPlano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:hint="Texto a cifrar aquí..."
+        android:lines="4">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPlano"
+        android:layout_alignLeft="@+id/etCifrado"
+        android:layout_marginTop="45dp"
+        android:text="Texto cifrado" />
+
+    <EditText
+        android:id="@+id/etCifrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPlano"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:hint="Texto cifrado aquí..."
+        android:lines="4" />
+
+    <Button
+        android:id="@+id/btnConvertir"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCifrado"
+        android:layout_alignRight="@+id/etCifrado"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="-33dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="Cifrar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spin1"
+        android:layout_alignLeft="@+id/spin1"
+        android:text="Texto a cifrar" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnConvertir"
+        android:layout_alignBottom="@+id/btnConvertir"
+        android:layout_alignLeft="@+id/etCifrado"
+        android:text="Limpiar" />
+
+</RelativeLayout>
